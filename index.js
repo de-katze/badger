@@ -59,7 +59,7 @@ app.get("/", (req, res) => {
                     <li><strong><code>labelColor</code></strong> (optional, default: <code>'grey'</code>): The color of the label text.</li>
                     <li><strong><code>color</code></strong> (optional, default: <code>'lightgrey'</code>): The background color of the badge.</li>
                     <li><strong><code>style</code></strong> (optional, default: <code>'flat'</code>): The style of the badge. Possible values: <code>'flat'</code>, <code>'plastic'</code>, <code>'flat-square'</code>.</li>
-                    <li><strong><code>logo</code></strong> (optional): The URL of the logo to be displayed on the badge.</li>
+                    <li><strong><code>logo</code></strong> (optional): The name of the logo to be displayed on the badge.</li>
                     <li><strong><code>logoColor</code></strong> (optional): The color of the logo image.</li>
                     <li><strong><code>linkLeft</code></strong> (optional, default: <code>'https://katze.click'</code>): The URL linked to the left side of the badge.</li>
                     <li><strong><code>linkRight</code></strong> (optional, default: <code>'https://github.com/de-katze/badger'</code>): The URL linked to the right side of the badge.</li>
@@ -68,8 +68,8 @@ app.get("/", (req, res) => {
     
             <div class="param">
                 <h3>Example Usage:</h3>
-                <p>GET /badge?label=Example&message=Badge&labelColor=blue&color=green&style=flat&logo=https://example.com/logo.png&logoColor=red&linkLeft=https://example.com/left&linkRight=https://example.com/right</p>
-                <img src="/badge?label=Example&message=Badge&labelColor=blue&color=green&style=flat&logo=https://example.com/logo.png&logoColor=red&linkLeft=https://example.com/left&linkRight=https://example.com/right" />
+                <p>GET /badge?label=Example&message=Badge&labelColor=blue&color=green&style=flat&logo=oct-logo-github&logoColor=red&linkLeft=https://example.com/left&linkRight=https://example.com/right</p>
+                <img src="/badge?label=Example&message=Badge&labelColor=blue&color=green&style=flat&logo=oct-logo-github&logoColor=red&linkLeft=https://example.com/left&linkRight=https://example.com/right" />
             </div>
     
             <div class="param">
