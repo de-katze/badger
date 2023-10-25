@@ -120,7 +120,8 @@ app.get("/slugs", (req, res) => {
     res.send({
         ["feather-icons"]: featherSlugs,
         ["simple-icons"]: simpleSlugs,
-        ["octicons"]: octSlugs
+        ["octicons"]: octSlugs,
+        ["local-icons"]: localIcon.logos
     })
 })
 
