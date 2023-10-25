@@ -2,6 +2,7 @@ const { makeBadge } = require('./modded_deps/badge-maker')
 const feather = require("feather-icons")
 const simple = require("simple-icons")
 const oct = require("@primer/octicons")
+const localIcon = require("./local_logos")
 const app = require("express")()
 
 let featherSlugs = Object.keys(feather.icons)
@@ -83,7 +84,7 @@ app.get("/", (req, res) => {
                     &lt;svg xmlns="http://www.w3.org/2000/svg" width="110" height="20" viewBox="0 0 110 20"&gt;
                         &lt;!-- SVG content representing the generated badge --&gt;
                     &lt;/svg&gt;
-                </pre>
+                </pre> 
             </div>
         </div>
     </body>
@@ -138,6 +139,9 @@ function getLogo(data, name, color) {
         return data
     } else if (name.startsWith("si-") && simple[name.replace("-", "")]) {
         data.logo = encode(simple[name].svg.replace(`<svg role="img"`, `<svg role="img" fill="${color || `#${simple[name].hex}`}"`))
+        return data
+    } else if (name.startsWith("local-")) {
+        data.logo = encode(localIcon.get(name.replace("local-", ""), color))
         return data
     }
 
