@@ -3,12 +3,13 @@
 const anafanafo = require('anafanafo')
 const { brightness } = require('./color')
 const { XmlElement, escapeXml } = require('./xml')
+const font = require("./font")
 
 // https://github.com/badges/shields/pull/1132
 const FONT_SCALE_UP_FACTOR = 10
 const FONT_SCALE_DOWN_VALUE = 'scale(.1)'
 
-const FONT_FAMILY = 'Verdana,Geneva,DejaVu Sans,sans-serif'
+const FONT_FAMILY = "Circular Std Medium"
 const fontFamily = `font-family="${FONT_FAMILY}"`
 const socialFontFamily =
   'font-family="Helvetica Neue,Helvetica,Arial,sans-serif"'
@@ -155,7 +156,7 @@ function renderBadge(
   const width = leftWidth + rightWidth
   const leftLink = escapeXml(links[0])
 
-  return `<!-- https://katze.click -->
+  return `<!-- https://katze.click -->\n<style>${font}</style>\n
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${width}" height="${height}" ${renderAriaAttributes(
     { links, accessibleText }
   )}>
